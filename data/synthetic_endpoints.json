@@ -1,0 +1,44 @@
+[
+  {
+    "endpoint_id": "edge-web-01",
+    "hostname": "portal.synthetic.example",
+    "port": 443,
+    "environment": "production",
+    "internet_exposed": true,
+    "owner": "web-platform",
+    "protocols": ["TLS1.0", "TLS1.2"],
+    "certificate_expires_at": "2026-09-25T00:00:00+00:00",
+    "key_bits": 2048,
+    "supports_weak_ciphers": true,
+    "hsts_enabled": false,
+    "ocsp_stapling": false
+  },
+  {
+    "endpoint_id": "api-gateway-02",
+    "hostname": "api.synthetic.example",
+    "port": 443,
+    "environment": "production",
+    "internet_exposed": true,
+    "owner": "api-platform",
+    "protocols": ["TLS1.2", "TLS1.3"],
+    "certificate_expires_at": "2027-02-01T00:00:00+00:00",
+    "key_bits": 3072,
+    "supports_weak_ciphers": false,
+    "hsts_enabled": true,
+    "ocsp_stapling": true
+  },
+  {
+    "endpoint_id": "legacy-admin-03",
+    "hostname": "admin.synthetic.internal",
+    "port": 8443,
+    "environment": "legacy",
+    "internet_exposed": false,
+    "owner": "",
+    "protocols": ["TLS1.1", "TLS1.2"],
+    "certificate_expires_at": "2026-08-15T00:00:00+00:00",
+    "key_bits": 1024,
+    "supports_weak_ciphers": true,
+    "hsts_enabled": false,
+    "ocsp_stapling": false
+  }
+]
